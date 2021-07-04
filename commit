@@ -1,0 +1,6 @@
+#!/bin/bash
+# commit archivos description
+
+git add $1
+git commit -m "$2"
+echo "commit succesfully":
