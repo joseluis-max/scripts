@@ -25,15 +25,25 @@
   - `dnf`: Fedore, CentOs, Red Hat Enterprise Linux
   - `zypper`: oppenSUSE/SUSE Linuz
   - `mac`: macOs ( HomeBrew default)
+
     `-p`: Install via MacPort
+    
     `-pu`: Update via MacPort
+    
     `-c`: Install via Conda
+    
     `-cu`: Update via Conda
+    
   - `windows`: windows ( WinGet defaul )
+
     `-s`: Install via Scoop
+    
     `-su`: Update via Scoop
+    
     `-c`: Install via Chocolately
+    
     `-cu`: Update via Chocolately
+    
 
   ###### Description and example
   Install:
