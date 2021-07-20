@@ -60,7 +60,7 @@
   Read official docs in ![Github Docs install cli](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
 
 ## GitHub Client create, clone and fork repositories
-Read more about config GitHub Client in ![CLI](https://cli.github.com/manual/gh_repo_create)
+Read more about GitHub Client in ![CLI](https://cli.github.com/manual/gh_repo_create)
 
 __Create a repository__
 ```
