@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#make a directory repo make
+
+if [ $1 == "make" ]
+then
+  gh repo create $2
+fi
+#clon a directory repo clone
+if [ $1 == "clone" ]
+then
+  #$2 -> repository
+  gh repo clone $2
+fi
+#fork a directory repo fork
+if [ $1 == "fork" ]
+then
+  #$2 -> repository
+  gh repo fork $2
+fi
+
+

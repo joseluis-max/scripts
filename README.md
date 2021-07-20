@@ -58,3 +58,19 @@
   If you need other way of installation you can read ![GitHub Cli Docs installation](https://github.com/cli/cli#installation)
   ### Manual installation
   Read official docs in ![Github Docs install cli](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+
+## GitHub Client create, clone and fork repositories
+Read more about config GitHub Client in ![CLI](https://cli.github.com/manual/gh_repo_create)
+
+__Create a repository__
+```
+$ repo make [name_repository]
+```
+__Clon a repository__
+```
+$ repo clon [repository]
+```
+__Fork a repository__
+```
+$ repo fork [repository]
+```
