@@ -1,0 +1,105 @@
+#!/bin/bash
+#installing github client
+if [ $1 == "apt" ] 
+then
+    case "$2" in 
+      -u)
+        sudo apt update
+        sudo apt install gh;;
+      -i) 
+        curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+        sudo apt update
+        sudo apt install gh;;
+      *) 
+        echo "This option $2 don't exist";;
+    esac
+fi
+
+if [ $1 == "dnf" ] 
+then
+    case "$2" in 
+      -u)
+        sudo dnf update gh
+        ;;
+      -i) 
+        sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+        sudo dnf install gh
+      ;;
+      *) 
+        echo "This option $2 don't exist"
+      ;;
+    esac
+fi
+
+if [ $1 == "zypper" ] 
+then
+    case "$2" in 
+      -u)
+        sudo zypper ref
+        sudo zypper update gh
+        ;;
+      -i) 
+        sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+        sudo zypper ref
+        sudo zypper install gh
+      ;;
+      *) 
+        echo "This option $2 don't exist"
+      ;;
+    esac
+fi
+
+if [ $1 == "mac" ] 
+then
+    case "$2" in 
+      -u)
+        brew upgrade gh
+      ;;
+      -i) 
+        sudo install gh
+      ;;
+      -p)
+        sudo port install gh
+      ;;
+      -pu)
+        sudo port selfupdate && sudo port upgrade gh
+      ;;
+      -c)
+        conda install gh --channel conda-forge
+      ;;
+      -cu)
+        conda update gh --channel conda-forge
+      ;;
+      *) 
+        echo "This option $2 don't exist"
+      ;;
+    esac
+fi
+
+if [ $1 == "windows" ] 
+then
+    case "$2" in 
+      -u)
+        winget install gh 	
+      ;;
+      -i) 
+        winget upgrade gh
+      ;;
+      -s)
+        scoop install gh
+      ;;
+      -su)
+        scoop update gh
+      ;;
+      -c)
+        choco install gh
+      ;;
+      -cu)
+        choco upgrade gh
+      ;;
+      *) 
+        echo "This option $2 don't exist"
+      ;;
+    esac
+fi
